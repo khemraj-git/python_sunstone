@@ -30,11 +30,11 @@ sales_data.dropna(inplace=True)  # Remove rows with missing values
 
 # --- Task 2: Perform Summary Statistics and Exploratory Analysis ---
 
-# Display basic statistics
+# Displaying the basic statistics
 print("Summary Statistics:")
 print(sales_data.describe())
 
-# Display data types and check for any inconsistencies
+# Display data types and check for any inconsistencies.
 print("\nData Types:")
 print(sales_data.dtypes)
 
@@ -70,7 +70,8 @@ if 'PRODUCTLINE' in sales_data.columns and 'SALES' in sales_data.columns:
     plt.show()
 
 # Example: Seasonal patterns (if applicable)
-#If you have a date column, you can extract month or day of week to find seasonal patterns.
+
+# To extract month or day of week to find seasonal patterns.
 if 'ORDERDATE' in sales_data.index:
     sales_data['Month'] = sales_data.index.month
     monthly_avg_sales = sales_data.groupby('Month')['SALES'].mean()
